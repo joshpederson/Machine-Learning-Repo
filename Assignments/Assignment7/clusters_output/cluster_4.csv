@@ -1,0 +1,15 @@
+Cluster 4 Summary
+Number of Plants: 4
+Total Capacity: 25.9 MW
+Average Distance to Cluster Center: 97.16 km
+Closest Plant to Menomonie: "Barrow" (4459.6 km)
+Primary Sources:
+  - petroleum: 3
+  - natural gas: 1
+
+Plant-Level Data:
+Plant_Name,PrimSource,Total_MW,Distance_km,Cluster,Dist_to_ClusterCenter
+Barrow,natural gas,17.3,4459.584155270432,4,124.29333342725367
+NSB Atqasuk Utility,petroleum,3.2,4476.0755125678825,4,70.11327435253612
+NSB Point Lay Utility,petroleum,2.4,4686.242515710034,4,165.50545422734513
+NSB Wainwright Utility,petroleum,3.0,4572.786948320939,4,28.738620638132478

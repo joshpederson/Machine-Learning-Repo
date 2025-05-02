@@ -1,0 +1,14 @@
+Cluster 6 Summary
+Number of Plants: 4
+Total Capacity: 41.3 MW
+Average Distance to Cluster Center: 1.80 km
+Closest Plant to Menomonie: "Unalaska Power Module" (5236.2 km)
+Primary Sources:
+  - petroleum: 4
+
+Plant-Level Data:
+Plant_Name,PrimSource,Total_MW,Distance_km,Cluster,Dist_to_ClusterCenter
+Dutch Harbor,petroleum,18.4,5236.574240801468,6,2.0936668298632184
+Unalaska Power Module,petroleum,0.8,5236.150126462421,6,2.0487917718627524
+Westward Seafoods,petroleum,6.6,5238.8342635361905,6,1.9063285607360965
+Unisea G 2,petroleum,15.5,5238.007591332809,6,1.1312614915776058

@@ -1,0 +1,15 @@
+Cluster 5 Summary
+Number of Plants: 4
+Total Capacity: 37.3 MW
+Average Distance to Cluster Center: 80.21 km
+Closest Plant to Menomonie: "NSB Kaktovik Utility" (3961.2 km)
+Primary Sources:
+  - natural gas: 3
+  - petroleum: 1
+
+Plant-Level Data:
+Plant_Name,PrimSource,Total_MW,Distance_km,Cluster,Dist_to_ClusterCenter
+NSB Kaktovik Utility,petroleum,2.6,3961.2145798923034,5,160.4161741936046
+NSB Nuiqsut Utility,natural gas,4.4,4233.959264207955,5,117.78623290937644
+TNSG South Plant,natural gas,7.2,4140.145028318065,5,22.644306639952493
+TNSG North Plant,natural gas,23.1,4137.929184147783,5,19.991892797751767
