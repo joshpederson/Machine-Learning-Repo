@@ -5,15 +5,12 @@ from sklearn.linear_model import LinearRegression
 
 from Testing import *
 
-#load powerplant Dataset
+# Load and clean powerplant Dataset
 df = pd.read_csv("powerplants.csv")
-cdf = pd.read_csv("cleaned_powerplant_data.csv")
-cdf1 = pd.read_csv("cleaned_powerplant_data1.csv")
-#print(df.columns)
+df_cleaned = df.dropna(subset=["capacity in MW", "generation_gwh_2021", "estimated_generation_gwh_2021", "latitude"])
 
-X = cdf1[["capacity in MW", "generation_gwh_2021"]]
-y = cdf1["estimated_generation_gwh_2021"]
-
+X = df_cleaned[["capacity in MW", "generation_gwh_2021"]]
+y = df_cleaned["estimated_generation_gwh_2021"]
 
 reg = LinearRegression().fit(X, y)
 print(f"Sklearn Linear Regression Coefficients: {reg.coef_}")
@@ -25,9 +22,5 @@ print(f"MyRegressionLibrary Coefficients: {reg.coef_}")
 print(f"MyRegressionLibrary Model R² Score: {reg.score(X, y)}")
 print(f"MyRegressionLibrary Model RMSE: {reg.RMSE(X, y)}")
 
-
-
-#print(cdf1[["capacity in MW", "generation_gwh_2021", "estimated_generation_gwh_2021"]].corr())
-
-plot_country_map("USA", "United States of America", df)
-#plot_country_map("CHN", "China", df)
+#plot_country_map("USA", "United States of America", df_cleaned)
+#plot_country_map("CHN", "China", df_cleaned)

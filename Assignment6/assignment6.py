@@ -1,21 +1,21 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.ensemble import RandomForestClassifier, BaggingClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-# Load dataset
+# Load datasets
 #https://www.kaggle.com/datasets/datamunge/sign-language-mnist
-df = pd.read_csv("sign_mnist_train.csv")
+train_df = pd.read_csv("Assignment5/sign_mnist_train.csv")
+test_df = pd.read_csv("Assignment5/sign_mnist_test.csv")
 
 # Prepare features and labels
-y = df.iloc[:, 0].copy().to_numpy()  # First column as target
-X = df.iloc[:, 1:785].copy().to_numpy()  # Remaining columns as features
-
-# Train-test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+y_train = train_df.iloc[:, 0].to_numpy()
+X_train = train_df.iloc[:, 1:].to_numpy()
+y_test = test_df.iloc[:, 0].to_numpy()
+X_test = test_df.iloc[:, 1:].to_numpy()
 
 # Random Forest with Grid Search
 rf_param_grid = {
@@ -73,7 +73,7 @@ plt.show()
 
 # Feature Importances for Random Forest
 importances = pd.DataFrame(
-    best_rf.feature_importances_, index=df.columns[1:785], columns=["Importance"]
+    best_rf.feature_importances_, index=train_df.columns[1:785], columns=["Importance"]
 ).sort_values(by="Importance", ascending=False)
 
 importances.plot.bar(figsize=(10, 5), legend=False)
