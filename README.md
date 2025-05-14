@@ -71,7 +71,15 @@ Bagging SVC - OOB Score: 0.991
 
 The OOB score is 99.1%, which is much higher than the test score and suggests the model is not generalizing well.
 
+To fix these issues I could try:
 
+For Random Forest, try lowering max_depth, increasing min_samples_split, or reducing n_estimators to make the model less complex.
+
+For Bagging, Reduce the number of estimators
+
+Expand the grid search to include a wider range of values for parameters like max_depth, min_samples_split, and n_estimators.
+
+For SVC, try different kernels and regularization parameters (C).
 
 ![ConfusionMaxtrixAssignment6](https://github.com/user-attachments/assets/f0485068-3fb4-471e-a94e-f887b796c89f)
 
