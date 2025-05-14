@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from Testing import *
 
 # Load and clean powerplant Dataset
-df = pd.read_csv("powerplants.csv")
+df = pd.read_csv("Assignment1/powerplants.csv")
 df_cleaned = df.dropna(subset=["capacity in MW", "generation_gwh_2021", "estimated_generation_gwh_2021", "latitude"])
 
 X = df_cleaned[["capacity in MW", "generation_gwh_2021"]]
@@ -22,5 +22,5 @@ print(f"MyRegressionLibrary Coefficients: {reg.coef_}")
 print(f"MyRegressionLibrary Model R² Score: {reg.score(X, y)}")
 print(f"MyRegressionLibrary Model RMSE: {reg.RMSE(X, y)}")
 
-#plot_country_map("USA", "United States of America", df_cleaned)
+plot_country_map("USA", "United States of America", df_cleaned)
 #plot_country_map("CHN", "China", df_cleaned)
